@@ -1,0 +1,128 @@
+
+  <div class="row">
+    <div class="col-4">
+      <div  #stickyMenu [class.sticky] = "sticky" class="search-field-wrapper-container">
+        <!-- Search fields container -->
+        <div class="search-field-container">
+            <div class="search-advanced-fields-container" *ngIf="!searchToggle">
+               <input type="text" placeholder="Search"    />
+               <a class="filter-button"   (click)="openModal()"></a>
+            </div>
+            <div id="collapse-border">
+               <div id="showleft" class="collapse-button" (click)="onDisplayLeftPannel(event)"  >
+                  <!--[ngClass]="{'ordermanagement-search-collapse-reference-id' : !show, 'ordermanagement-search-collapse-reference-id1' : show}"-->
+                  <a class="ordermanagement-search-collapse-reference-left"
+                     [ngClass]="{'ordermanagement-search-collapse-reference-right' : searchToggle }">
+                  </a>
+               </div>
+           </div>
+        </div>   
+        <!-- Search list panel container -->             
+        <div class="left-panel-content" *ngIf="!searchToggle">
+           <perfect-scrollbar>
+             <div class="left-panel-search-text-color-reference-id hideClass" >          
+               <div class="search-list-item">
+                   <div class="search-list-item-row">
+                       <div style="display: flex">
+                     <h6 class="inquiry-id">I01234567890</h6>              
+                   </div>
+                     <h6 class="search-status-progress-inquiry" >INQUIRY</h6>
+                   </div>
+                   <div class="search-list-item-row">
+                     <div class="left-panel-item-value-row-list">1611021166</div>
+                   </div>
+                   <div class="search-list-item-row">
+                     <div class="search-list-item-row">SCG Plast - Export</div>
+                     <div class="">Perf. Auto Non-Mitsui</div>
+                   </div>
+                   <div class="search-list-item-row">
+                     <div class="search-list-item-row" id="companyname-lable-reference-id">ITOCHU Co.,Ltd.</div>
+                     <div class="" id="companyname-lable-reference-id">ITOCHU Co.,Ltd.</div>
+                   </div>
+               </div>
+               <div class="search-list-item">
+                   <div class="search-list-item-row">
+                     <!-- <h6 class="inquiry-id">I01234567890</h6> -->
+                     <div style="display: flex">
+                         <h6 class="inquiry-id">I01234567890</h6>
+                         <!-- <span class="e-reference-id-left-panel">e</span>
+                         <span class="doller-reference-id-left-panel">$</span> -->
+                     </div>
+                     <h6 class="search-status-progress-bit-approved" >BID APPROVED</h6>
+                   </div>
+                   <div class="search-list-item-row">
+                     <div class="left-panel-item-value-row-list">1611021166</div>
+                   </div>
+                   <div class="search-list-item-row">
+                     <div class="search-list-item-row">SCG Plast- Dealer</div>
+                     <div class="">Perf. Auto Mitsui</div>
+                   </div>
+                   <div class="search-list-item-row">
+                     <div class="search-list-item-row" id="companyname-lable-reference-id">ITOCHU Co.,Ltd.</div>
+                     <div class="" id="companyname-lable-reference-id">ITOCHU Co.,Ltd</div>
+                   </div>
+               </div>
+               <div class="search-list-item">
+                   <div class="search-list-item-row">
+                     <h6 class="inquiry-id">I01234567890</h6>
+                     <h6 class="search-status-progress" >INITIATED</h6>
+                   </div>
+                   <div class="search-list-item-row">
+                     <div class="left-panel-item-value-row-list">1611021166</div>
+                   </div>
+                   <div class="search-list-item-row">
+                     <div class="search-list-item-row">SCG Plast - Re-Export</div>
+                     <div class="">Perf. Auto Mitsui</div>
+                   </div>
+                   <div class="search-list-item-row">
+                     <div class="search-list-item-row" id="companyname-lable-reference-id">ITOCHU Co.,Ltd.</div>
+                     <div class="" id="companyname-lable-reference-id">ITOCHU Co.,Ltd.</div>
+                   </div>
+               </div>
+               <div class="search-list-item">
+                   <div class="search-list-item-row">
+                     <h6 class="inquiry-id">I01234567890</h6>
+                     <h6 class="search-status-progress" >COMPLETED</h6>
+                   </div>
+                   <div class="search-list-item-row">
+                     <div class="left-panel-item-value-row-list">1611021166</div>
+                   </div>
+                   <div class="search-list-item-row">
+                     <div class="search-list-item-row">SCG Plast - Re-Export</div>
+                     <div class="">Perf. Auto Mitsui</div>
+                   </div>
+                   <div class="search-list-item-row">
+                     <div class="search-list-item-row" id="companyname-lable-reference-id">ITOCHU Co.,Ltd.</div>
+                     <div class="" id="companyname-lable-reference-id">ITOCHU Co.,Ltd.</div>
+                   </div>
+               </div>
+               <div class="search-list-item">
+                   <div class="search-list-item-row">
+                       <h6 class="inquiry-id">I01234567890</h6>
+                       <h6 class="search-status-progress" >COMPLETED</h6>
+                   </div>
+                   <div class="search-list-item-row">
+                       <div class="left-panel-item-value-row-list">1611021166</div>
+                   </div>
+                   <div class="search-list-item-row">
+                       <div class="search-list-item-row">SCG Plast - Re-Export</div>
+                       <div class="">Perf. Auto Mitsui</div>
+                   </div>
+                   <div class="search-list-item-row">
+                       <div class="search-list-item-row" id="companyname-lable-reference-id">ITOCHU Co.,Ltd.</div>
+                       <div class="" id="companyname-lable-reference-id">ITOCHU Co.,Ltd.</div>
+                   </div>
+                </div>
+                 
+             </div>
+           </perfect-scrollbar>
+        </div>              
+      </div>
+    </div>
+    <div class="col-7">
+  
+    </div>
+  </div>
+
+
+

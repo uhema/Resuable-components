@@ -1,0 +1,193 @@
+
+.search-field-wrapper-container {
+    
+    height: 100%;
+    margin-right: 15px;
+}
+
+.search-field-container {
+    border-right: 1px solid #cccccc;
+    background: #797979;
+    display: inline-flex;
+    flex-direction: row;
+    min-height: 40px;  
+    padding: 0px 1px;
+    width:100%;
+  }
+  .search-field-container input {
+    width: 100%;
+    font-size: 13px;
+    background: white url(/assets/search1.png) no-repeat right center;
+    padding: 4px 10px;
+    padding-right: 32px;
+    border: 1px solid #797979;
+    color: #797979;
+    margin-right: 5px;
+}
+  .search-list-item { 
+    padding: 20px 10px 5px 11px;   
+    box-shadow: 1px 1px #b3afaf;
+    border-bottom: none;    
+  }
+  .left-panel-search-text-color-reference-id {
+    background: inherit;
+    background-color: rgba(242, 242, 242, 1);
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    height:100vh;
+    /* width:350px; */
+    border-right: 1px solid #cccccc;
+  }
+  .search-list-item-row .inquiry-id {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin:0;
+    color: #333333;
+  }
+  .search-list-item-row .search-status-progress-inquiry {
+  
+    font-size: 0.75rem;
+    font-weight: bold;
+    background-color:#6d6a6a;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 7px 10px;
+    margin: 0;
+    min-width: 100px;    
+    text-align: center;
+  }
+  .search-list-item-row .search-status-progress-bit-approved {  
+    font-size: 0.75rem;
+    font-weight: bold;
+    background-color:#6d6a6a;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 7px 10px;
+    margin: 0;
+    min-width: 100px;   
+    text-align: center;
+  }  
+  .p-space-reference-id-left-panel{  
+    display: flex;
+    height: 17px;
+    width: 17px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50px;
+    color: white;
+    background: #36aae0;
+    padding: 0px 0 0 5px;
+    font-weight: 500;
+    font-size: 12px; 
+    margin-left: 10px; 
+  }
+  .left-panel-item-value-row-list{
+    font-size: 12px;
+    color: black;
+    font-weight: 600;
+  }
+  .search-advanced-fields-container {
+      display: flex;
+      width: 100%;
+  }
+.search-list-item-row .search-status-progress {  
+    font-size: 0.75rem;
+    font-weight: bold;
+    background-color:#6d6a6a;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 7px 10px;
+    margin: 0;
+    min-width: 100px;   
+    text-align: center;
+  }
+.search-list-item-row .search-status-approved {  
+    font-size: 0.75rem;
+    font-weight: bold;
+    background-color: #2eb32d;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 6px 25px;
+    margin: 0;
+    min-width: 120px;
+    max-width: 120px;
+    text-align: center;
+}
+.search-list-item-row .search-status-recieved {
+    background-color:#0099ffb3;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    color:#ffffff;
+    font-weight: bold;
+    margin:0;
+    padding: 6px 25px;
+    min-width: 120px;
+    max-width: 120px;
+    text-align: center;
+}
+#collapse-border{
+    border-left: 1px solid #c1c0c0;
+}
+.ordermanagement-search-collapse-reference-left{
+    background: url(/assets/search-list-icon-u304.png) no-repeat center center;
+    width: 40px !important;
+    height: 40px;
+    display: block;
+}
+.ordermanagement-search-collapse-reference-right{
+    background: url(/assets/search-list-icon-u305.png) no-repeat center center;
+    width: 40px !important;
+    height: 40px;
+    display: block;
+} 
+
+.filter-button {
+    background: url(/assets/u318.png) no-repeat center center;
+    width: 40px;
+    height: 40px;
+  }
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .left-pannel-box {       
+        width: 55%;
+        position: absolute;
+        z-index: 1;
+        overflow-x: hidden;
+      }
+      .right-panel-box{
+        max-width:100% !important;
+      }
+      .panel-title-block {
+        top: 45px;
+      }
+      .right-panel-width{
+        position: relative;
+        top:-27px;
+        padding-left: 15px;
+      }
+      .popover-scroll {
+        height: 100vh;
+        overflow-y: scroll;
+        padding-bottom: 30px;
+      }
+      #popOver{
+        height: 45vh;
+        overflow-y: scroll;
+        top:4%;
+      }
+      .sticky{
+        position: fixed !important;
+        top: 0;
+        overflow: hidden;
+        z-index: 10;      
+      }
+      .sales-flow-small-screen{
+        display: flex;
+        justify-content: center;
+      }  
+      .refresh-id{
+        padding-top:0px;
+      }
+  }

@@ -1,0 +1,162 @@
+<!-- POPUP -->
+<div     [popper]="popper1Content"
+[popperShowOnStart]="false"
+[popperTrigger]="'click'"
+[popperHideOnClickOutside]="true"
+[popperHideOnScroll]="true"
+[popperPlacement]="'bottom'"
+[popperApplyClass]="'mystyle'"
+class="bold popup-class-ref">
+<b>Hey i am popup!</b>
+
+
+</div>
+<popper-content #popper1Content class="popup-ref">
+  <div class="container"  >
+    <div class="row" >
+      <div class="col-sm-4">
+        <h3>Column 1</h3>
+        <p>Welconme to cus popup</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Column 2</h3>
+        <p>Welconme to cus popup</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Column 3</h3>        
+        <p>Welconme to cus popup</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+    </div>
+  </div>
+  <span (click)="popper1Content.hide()">Close</span>
+</popper-content>
+<br>
+<!-- search and drop down -->
+<p>SEARCH AND DROP DOWN</p>
+<ng-select bindLabel="name"
+              placeholder="Select item"
+              appendTo="body"
+              multiple="true"
+              [searchable]="true" 
+              [clearable]="true"
+              [(ngModel)]="selected">
+        <ng-option [value]="item.id" [disabled]="item.disabled" *ngFor="let item of items">
+          
+            {{item.name}}
+        </ng-option>
+</ng-select>
+<br><br>
+
+
+
+<!-- BOOTSTRAP CALENDER  -->
+<!-- <p>BOOTSTRAP CALENDER</p>
+<div class="bootstrap-date-ref">
+
+  <input type="text"
+    class="form-control "
+    [minDate]="minDate"
+    [maxDate]="maxDate"
+    #dp="bsDatepicker"
+    bsDatepicker [(bsValue)]="myDateValue">
+  
+  
+</div>
+<br> -->
+
+<!-- OWL Date&time  -->
+<p>OWL Date&time </p> 
+<div class="date-field-container">
+    <input [owlDateTime]="dt3" placeholder="Date Time" 
+        [readonly]=true class="form-control">
+    <span [owlDateTimeTrigger]="dt3">
+      <i class="fa fa-calendar">yyyy</i> 
+    </span>
+    <owl-date-time #dt3></owl-date-time>
+</div>
+<br>
+
+<!-- OWL DAte TIME PICKER -->
+<p>OWL RANGE DATE AND TIME PICKER (Range Selection)</p>
+<div class="example-wrapper">
+    <label class="example-input-wrapper">
+        Date Time:
+        <input placeholder="Date Time Range:"
+                [style.width]="'350px'"
+                [(ngModel)]="dateTimeRange"
+                [selectMode]="'range'"
+                [owlDateTimeTrigger]="dtRange1" [owlDateTime]="dtRange1">
+
+        <owl-date-time #dtRange1></owl-date-time>
+    </label>
+
+    <p>Value From Picker: {{dateTimeRange}}</p>
+</div>
+
+<br>
+
+<!-- File Uploading -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+        <form method="post">    
+              <div class="form-group files">
+                <p><label>UPLOAD YOUR FILES </label></p> 
+                <input type="file" class="form-control" multiple="true">
+              </div> 
+        </form> 
+    </div>
+  </div>
+</div>
+<br>
+
+<!-- NGX LOADING  -->
+<p>NGX LOADING</p>
+<form (ngSubmit)="onSubmit()"> 
+    <button 
+          type="submit"          
+          class="btn btn-secondary">Loading</button>
+    <ngx-loading [show]="loading" ></ngx-loading> 
+</form>
+
+<!-- PERFECT SCROLL BAR -->
+<p> PERFECT-SCROLLBAR</p>
+<perfect-scrollbar class="perferect-scroll-bar-ref" [config]="config">
+    <div>
+        Scroll<br>
+        me!<br>
+        <br>
+        I<br>
+        am<br>
+        an<br>
+        example<br>
+        content<br>
+        text<br>
+        for<br>
+        this<br>
+        really<br>
+        cool<br>
+        scrollable<br>
+        area<br>
+        in<br>
+        this<br>
+        example<br>
+        app<br>
+        which<br>
+        is<br>
+        using<br>
+        the<br>
+        angular<br>
+        perfect<br>
+        scrollbar<br>
+        library<br>
+      </div>    
+</perfect-scrollbar>
+
+<br>
+<br>
