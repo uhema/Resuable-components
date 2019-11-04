@@ -1,15 +1,13 @@
 <!-- POPUP -->
-<div     [popper]="popper1Content"
-[popperShowOnStart]="false"
-[popperTrigger]="'click'"
-[popperHideOnClickOutside]="true"
-[popperHideOnScroll]="true"
-[popperPlacement]="'bottom'"
-[popperApplyClass]="'mystyle'"
-class="bold popup-class-ref">
-<b>Hey i am popup!</b>
-
-
+<div  [popper]="popper1Content"
+      [popperShowOnStart]="false"
+      [popperTrigger]="'click'"
+      [popperHideOnClickOutside]="true"
+      [popperHideOnScroll]="true"
+      [popperPlacement]="'bottom'"
+      [popperApplyClass]="'mystyle'"
+      class="bold popup-class-ref">
+  <b>Hey i am popup!</b>
 </div>
 <popper-content #popper1Content class="popup-ref">
   <div class="container"  >
@@ -73,7 +71,7 @@ class="bold popup-class-ref">
     <input [owlDateTime]="dt3" placeholder="Date Time" 
         [readonly]=true class="form-control">
     <span [owlDateTimeTrigger]="dt3">
-      <i class="fa fa-calendar">yyyy</i> 
+        <img class='date-img-reference'  src='../../assets/cal-icon.png' />
     </span>
     <owl-date-time #dt3></owl-date-time>
 </div>

@@ -1,0 +1,28 @@
+<div style="text-align:center">
+  <div>
+    <p>WEB CAMERA</p>
+    <webcam [height]="500" 
+        [width]="500" 
+        [trigger]="triggerObservable" 
+        (imageCapture)="handleImage($event)" 
+        *ngIf="showWebcam"
+          [allowCameraSwitch]="allowCameraSwitch" [switchCamera]="nextWebcamObservable" [videoOptions]="videoOptions" (cameraSwitched)="cameraWasSwitched($event)"
+          (initError)="handleInitError($event)">
+    </webcam>
+    <br/>
+    <button class="actionBtn btn btn-sm btn-primary" (click)="triggerSnapshot();" title="Take Picture">shoot</button>
+    <!-- <div class="actionBtn" (click)="showNextWebcam(true);" title="Switch Camera">🔁</div> -->
+  </div>
+</div>
+
+
+<p>BOOTSTRAP CALENDER</p>
+		<div class="col-xs-12 col-12 col-md-4 form-group">
+				<input type="text"
+					  class="form-control"
+					  [minDate]="minDate"
+					  [maxDate]="maxDate"
+					  #dp="bsDatepicker"
+					  bsDatepicker [(bsValue)]="myDateValue">
+    </div>
+    

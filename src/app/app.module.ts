@@ -9,6 +9,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgDragDropModule } from 'ng-drag-drop';
 import { NgSelectModule } from '@ng-select/ng-select';
 import {NgxPopperModule} from 'ngx-popper';
+import {WebcamModule} from 'ngx-webcam';
+import { DatepickerModule, BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 //  import { DatepickerModule, BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
@@ -17,12 +19,14 @@ import { PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfi
 import { AppRoutingModule } from './app-routing.module';
 import { LeftpanelComponent } from './leftpanel/leftpanel.component';
 import { CommonResuablesComponent } from './common-resuables/common-resuables.component';
+import { CameraComponent } from './camera/camera.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeftpanelComponent,
-    CommonResuablesComponent
+    CommonResuablesComponent,
+    CameraComponent
   ],
   imports: [
     AppRoutingModule,
@@ -37,6 +41,7 @@ import { CommonResuablesComponent } from './common-resuables/common-resuables.co
     NgxPopperModule.forRoot({placement: 'bottom'}),
     // BsDatepickerModule.forRoot(),
     // DatepickerModule.forRoot() ,
+
     NgxLoadingModule.forRoot({
           animationType: ngxLoadingAnimationTypes.circleSwish,
           backdropBackgroundColour: 'rgba(0,0,0,0.1)', 
@@ -47,6 +52,9 @@ import { CommonResuablesComponent } from './common-resuables/common-resuables.co
           tertiaryColour: '#ffffff'
     }),
     PerfectScrollbarModule,
+    WebcamModule,
+    BsDatepickerModule.forRoot(),
+    DatepickerModule.forRoot() ,
     AppRoutingModule
 
     
